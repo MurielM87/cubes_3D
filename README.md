@@ -1,3 +1,3 @@
 # cubes_3D
 
-Faire un cube en 3D avec du CSS et une animation de rotation
+Création de deux cubes 3D avec des animations en CSS
