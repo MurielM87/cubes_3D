@@ -11,8 +11,8 @@ body {
     width: var(--size);
     height: var(--size);
     transform-style: preserve-3d;
-    /*transform: rotateY(30deg) rotateZ(30deg);*/
-    animation: spin 20s infinite linear;
+    transform: rotateY(30deg) rotateZ(30deg);
+    animation: cube 20s infinite linear;
 }
 
 .side {
@@ -56,7 +56,63 @@ body {
     transform: rotateY(-180deg) translateZ(calc(var(--size) / 2));
 }
 
-@keyframes spin {
+@keyframes cube {
+    from {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+
+.cube2 {
+    margin : 12rem auto 0;
+    width: var(--size);
+    height: var(--size);
+    transform-style: preserve-3d;
+    transform: rotateY(30deg) rotateZ(30deg);
+    animation: cube2 20s infinite linear;
+}
+
+.side2 {
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    opacity : 0.8;
+    width: var(--size);
+    height: var(--size);
+}
+
+#front2 {
+    transform: translateZ(calc(var(--size) / 2));
+}
+
+#bottom2 {
+    transform: rotateX(270deg) translateY(calc(var(--size) / 2));
+    transform-origin: bottom center;
+}
+
+#top2 {
+    transform: rotateX(-270deg) translateY(calc(-1 * (var(--size) / 2)));
+    transform-origin: top center; 
+}
+
+#left2 {
+    transform: rotateY(270deg) translateX(calc(-1 * (var(--size) / 2)));
+    transform-origin: top left; 
+}
+
+#right2 {
+    transform: rotateY(-270deg) translateX(calc(var(--size) / 2));
+    transform-origin: top right; 
+}
+
+#back2 {
+    transform: rotateY(-180deg) translateZ(calc(var(--size) / 2));
+}
+
+@keyframes cube2 {
     from {
         transform: rotateX(0) rotateY(0) rotateZ(0);
     }
